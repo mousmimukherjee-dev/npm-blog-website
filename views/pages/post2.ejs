@@ -10,9 +10,7 @@
 
 <p>
 My Journey Into the MERN Stack.<br>
-
-I am learning Node.js, Express.js, and I have just started exploring React. I haven not learned MongoDB yet — but that is next on my list!
-
+<p>I am learning Node.js, Express.js, and I have just started exploring React. I haven not learned MongoDB yet — but that is next on my list!
 And honestly? I think this step-by-step approach feels much better.</p>
 
 <h4>💻 Starting with Node.js & Express</h4>
@@ -23,7 +21,6 @@ With Express.js, I started building routes, handling requests, and rendering pag
 At first, backend concepts felt confusing — especially things like:</p>
 
 <ul>
-
   <li>Routing</li>
   <li>Middleware</li>
   <li>Handling form data</li>
@@ -80,12 +77,10 @@ We will get there — step by step.</p>
   <button type="submit">Submit your comment</button>
 </form>
 
-
-
 <% if(post.comments && post.comments.length > 0) {%>
 
-
 <h2>Comments:</h2>
+
 <ul>
 <% post.comments.forEach(c => { %>
 
@@ -93,13 +88,10 @@ We will get there — step by step.</p>
     <%= c %>
   </li>
 
-
 <% }) %>
 </ul>
 
 <% } %>
-
-
 
 </main>
 <%- include("../partials/footer") %>

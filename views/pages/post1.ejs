@@ -8,29 +8,20 @@
 <h1><%= post.title %><img src="/image/js (2).png" alt="image" class="img"></h1>
 
 
-<p>
-
-My Journey Learning JavaScript
-
-When I first started learning JavaScript, I felt nervous but excited at the same time.
-
+<p>My Journey Learning JavaScript.<br>
+<p>When I first started learning JavaScript, I felt nervous but excited at the same time.</p>
 <h4>My first line of code was:
 
 console.log("Hello World");</h4>
 
 <p>It looked simple, but seeing it work in the browser console felt amazing. That small moment gave me confidence.
-
 I struggled a lot in the beginning. Sometimes a tiny mistake would break everything, and I wouldnot understand why. But slowly, step by step, things started making sense.
-
 The first time I made a button it was to show an alert message, I felt so proud. My website was no longer just design — it became interactive.
-
 I am still learning every day. And if you are a beginner too, just remember:
-
 You dnot have to understand everything at once.
 Just learn one small thing today — and keep building.</p>
 
 <h4>🚀 Learn. Build. Repeat.</h4>
-
 
 <h4>Add a comment here</h4>
 
@@ -39,10 +30,7 @@ Just learn one small thing today — and keep building.</p>
   <button type="submit">Submit your comment</button>
 </form>
 
-
-
 <% if(post.comments && post.comments.length > 0) {%>
-
 
 <h2>Comments:</h2>
 <ul>
@@ -52,13 +40,10 @@ Just learn one small thing today — and keep building.</p>
     <%= c %>
   </li>
 
-
 <% }) %>
 </ul>
 
 <% } %>
-
-
 
 </main>
 <%- include("../partials/footer") %>
