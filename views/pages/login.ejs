@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body class="login">
+<%- include("../partials/header") %>
+
+<main>
+
+  
+<form action="/login" method="post">
+  <input type="text" name="username" placeholder="Enter username: letters & numbers, 3-20 characters" required>
+  <input type="password" name="password" placeholder="Enter password: at least 6 characters" required>
+
+  <button type="submit">Login</button>
+</form>
+
+
+</main>
+
+<%- include("../partials/footer") %>
+</body>
+
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+<%- include("../partials/header") %>
+<main>
+
+
+<h1><%= post.title %><img src="/image/mern.png" alt="image" class="img"></h1>
+
+<p>
+My Journey Into the MERN Stack 
+
+I recently started learning the MERN stack, but I didn’t jump into everything at once.
+
+Right now, I’m learning Node.js, Express.js, and I’ve just started exploring React. I haven’t learned MongoDB yet — but that’s next on my list!
+
+And honestly? I think this step-by-step approach feels much better.</p>
+
+<h4>💻 Starting with Node.js & Express</h4>
+
+<p>Learning Node.js helped me understand how JavaScript works on the server.
+With Express.js, I started building routes, handling requests, and rendering pages.
+
+At first, backend concepts felt confusing — especially things like:</p>
+
+<ul>
+
+  <li>Routing</li>
+  <li>Middleware</li>
+  <li>Handling form data</li>
+  <li>Connecting frontend with backend</li>
+</ul>
+
+<p>But after building small projects, it slowly started making sense.</p>
+
+<h4>⚛️ Just Started React</h4>
+
+<p>Now I have begun learning React, and it feels very different from traditional HTML.
+
+Components, props, state — everything is new.
+But I am excited because React makes building interactive UIs much more powerful.
+
+I know it will take time to understand deeply, but I am enjoying the process.</p>
+
+<h4>🗄️ MongoDB Is Next</h4>
+
+I havenot learned MongoDB yet, but I understand it is used for storing data.
+
+My plan is simple:
+First understand frontend and backend clearly,
+then learn how to connect everything with a database.
+
+One step at a time.
+
+<h4>🌱 What I have Learned So Far</h4>
+
+<p>I realized something important:
+
+You dont need to learn the whole MERN stack in one week.
+
+It is okay to feel confused, take breaks, learn slowly, and build small projects.
+
+What matters is consistency.</p>
+
+<h4>💬 Final Thoughts</h4>
+
+<p>I am still learning. Still making mistakes. Still growing.
+
+If you are also starting your MERN journey, don’t rush.
+Master one part, then move to the next.
+
+We will get there — step by step.</p>
+
+<h4>🚀 Learn. Build. Repeat.</h4>
+
+
+<h4>Add a comment here!</h4>
+
+<form action="/comments/<%= post.id %>" method="post">
+  <input type="text" name="comment" placeholder="add comment here!">
+  <button type="submit">Submit your comment</button>
+</form>
+
+
+
+<% if(post.comments && post.comments.length > 0) {%>
+
+
+<h2>Comments:</h2>
+<ul>
+<% post.comments.forEach(c => { %>
+
+  <li>
+    <%= c %>
+  </li>
+
+
+<% }) %>
+</ul>
+
+<% } %>
+
+
+
+</main>
+<%- include("../partials/footer") %>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") %>
+  <body class="home">
+  <%- include("../partials/header") %>
+
+  <main>
+
+    <div class="content">
+    <h1>Welcome to my Blog!</h1>
+    <p>
+    Hi! I am a passionate web development learner sharing my journey,
+    projects, and lessons about Node.js, Express, EJS, and modern web design.
+    </p>
+
+    <h2>What You'll Find Here</h2>
+    <ul>
+    <li>🚀 Web development tutorials</li>
+    <li>💻 Beginner-friendly coding explanations</li>
+    <li>🛠 Real project building guides</li>
+    <li>📚 Tips for learning programming</li>
+    </ul>
+
+
+  <h2>Latest Posts</h2>
+  <p>Explore my recent articles below and start learning today!</p>
+    <ul>
+     
+      <% blogPosts.forEach(post => { %>
+       
+        <li>
+          <a href="/pages/post/<%= post.id %>"><%= post.title %></a>
+        </li>
+      <% }) %>
+       
+    </ul>
+
+    </div>  
+  </main>
+    
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>
