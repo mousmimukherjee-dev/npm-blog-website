@@ -35,6 +35,21 @@ header i{
 .menu{
   
   display: flex;
+  
+}
+
+.menu a{
+
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body.home main {
@@ -46,36 +61,48 @@ body.home main {
 .home{
 
   width: 100%;
-  background-image: url("/image/bg_img.png");
-  background-position: right;
+  background-image: url("/image/bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-attachment: fixed;
-  word-spacing: 1px;
-  color: #1a1a1a;
+  letter-spacing: 1px;
+  color: #fffffcde;
+  font-weight: 600;
 }
 
 main {
   flex: 1;
   margin: 3rem;
+  
 }
 
 .logo{
 
   font-weight: 900;
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+
+
+
 
 .logo i{
 
-  color: #f4b400;
+  
   margin: 0 0.5rem;
 }
 
-.logo span{
 
-  color: #f4b400;
- 
-}
 
 .content{
 
@@ -83,10 +110,24 @@ main {
 }
 
 footer {
-  color: #fffffcde;
+  
   padding: 2rem;
   background-color: #111111;
   text-align: center;
+}
+
+footer p{
+
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -106,7 +147,14 @@ nav a::after{
 
   content: "";
   position: absolute;
-  background-color: #f4b400;
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
   width: 0;
   left: 0;
   height: 3px;
@@ -164,22 +212,33 @@ margin-right: 15px;
 font-size: 1rem;
 }
 
-.about_me .container{
+.about_me main{
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+  border-radius: 10px;
+
   
 }
 
 .about_me .content{
 
   padding: 2rem;
-  flex-basis: 50%;
+  flex: 1;
 }
 
 .about_me .container_img{
 
-  flex-basis: 40%;
+  flex: 1;
 }
 
 .container_img img{
@@ -208,7 +267,15 @@ font-size: 1rem;
 
 .social_icons a:hover{
 
-  color: #f4b400;
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: translateY(-5px);
 }
 
@@ -223,10 +290,10 @@ form textarea{
   width: 100%;
   border: 0;
   outline: none;
-  background: #262626;
+ background-color: #fffffcde;
   padding: 15px;
   margin: 15px 0;
-  color: #fffffcde;
+  color: black;
 
 }
 
@@ -234,7 +301,16 @@ form button{
 
   padding: 0.5rem;
   border-radius: 8px;
-  background-color: #262626;
+  border: none;
+ 
+   background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
   color: #fffffcde;
 }
 
@@ -249,6 +325,82 @@ form button{
 .hide{
 
   display: none;
+}
+
+.contact .container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+ 
+
+form input:focus{
+
+  outline: none;
+  border: 2px solid transparent;
+   background: 
+  linear-gradient(white, white) padding-box,
+   linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
+}
+
+
+.contact main{
+
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+ border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login main{
+
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post main{
+
+  
+  background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+  border-radius: 10px;
+  padding: 1rem;
+  
+  
+
 }
 
 
@@ -303,6 +455,7 @@ form button{
     right: 1px;
     padding: 0 0.5rem;
     border: transparent;
+    
   }
 
 
@@ -315,6 +468,16 @@ form button{
   .ham_menu{
 
     display: block;
+    background: linear-gradient(
+    90deg,
+    #f48fb1 0%,
+    #c084fc 40%,
+    #7c83fd 70%,
+    #4facfe 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 
   .menu.open{
@@ -328,26 +491,59 @@ form button{
     flex-direction: column;
   }
 
-  .home {
-  flex: 1;
-  width: 100%;
-  height: auto;
-  background-image: url("/image/bg_img.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-attachment: fixed;
-}
+  .about_me main{
+
+    padding-top: 1rem;
+  }
+
+ 
 
 .logo i{
 
   font-size: 1rem;
-  color: #f4b400;
+  
 }
 
 .contact_left .fa-paper-plane{
 
   font-size: 1rem;
+}
+
+
+
+
+.about_me .container{
+
+  flex-direction:column-reverse;
+}
+
+
+
+.about_me .container_img{
+
+flex: 1;
+}
+
+.about_me .container_img img{
+
+
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  
+}
+
+form input{
+
+  width: 90%;
+
+
+}
+
+button{
+
+  margin: 1rem;
 }
 
 
