@@ -11,7 +11,7 @@ commentsRouter.post("/:id",(req,res)=>{
   const postsID = Number(req.params.id)
   const post= blogPosts.find((post) => post.id === postsID);
 
-  if(!isAuthenticated){
+  if(!res.locals.isAuthenticated){
 
     return res.redirect("/login")
   }

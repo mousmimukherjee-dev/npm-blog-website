@@ -22,7 +22,7 @@ loginRouter.post("/",(req,res)=>{
   const passwordRegex = /^.{6,}$/; 
   if(usernameRegex.test(username) && passwordRegex.test(password)){
 
-    isAuthenticated=true;
+    res.locals.isAuthenticated=true;
     return res.redirect("/")
   }else{
 
