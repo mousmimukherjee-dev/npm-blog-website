@@ -1,7 +1,12 @@
 import express from "express";
 import path from "path";
-
 import blogPosts from "./data/data.js";
+import aboutRouter from "./routes/about.js";
+import commentsRouter from "./routes/comments.js";
+import contactRouter from "./routes/contact.js";
+import loginRouter from "./routes/login.js";
+import logoutRouter from "./routes/logout.js";
+import postRouter from "./routes/post.js";
 
 const app = express();
 
@@ -20,6 +25,13 @@ app.use((req,res,next)=>{
   res.locals.isAuthenticated=isAuthenticated;
   next();
 })
+app.use((req,res,next)=>{
+
+  res.locals.pageType="";
+  next()
+})
+
+
 app.get("/",(req,res)=>{
 
 
@@ -30,92 +42,15 @@ app.get("/",(req,res)=>{
   })
 })
 
-app.get("/pages/post/:id",(req,res)=>{
+app.use("/login",loginRouter);
+app.use("/contact",contactRouter);
+app.use("/about",aboutRouter);
+app.use("/logout",logoutRouter);
+app.use("/post",postRouter);
+app.use("/comments",commentsRouter);
 
-  const postsID = Number(req.params.id)
-  const post= blogPosts.find((post) => post.id === postsID)
 
-  if(post){
 
-    res.render(`pages/post${post.id}`,{post,
-      headTitle:post.title,
-      isAuthenticated
-    })
-  }
-  else{
-
-    res.render("pages/404")
-  }
-})
-
-app.post("/comments/:id",(req,res)=>{
-
-  const postsID = Number(req.params.id)
-  const post= blogPosts.find((post) => post.id === postsID);
-
-  if(!isAuthenticated){
-
-    return res.redirect("/login")
-  }
-
-  if(post){
-
-    const comment = req.body.comment;
-    if(comment){
-
-      post.comments.push(comment)
-      return res.redirect(`/pages/post/${postsID}`)
-    }
-  }
-
-  else{
-
-    res.status(404).render("pages/404")
-  }
-})
-
-app.get("/login",(req,res)=>{
-
-  res.render("pages/login",{
-    headTitle:"Log in",
-  })
-})
-
-app.post("/login",(req,res)=>{
-
-  let { username , password } = req.body;
-
-  const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
-  const passwordRegex = /^.{6,}$/; 
-  if(usernameRegex.test(username) && passwordRegex.test(password)){
-
-    isAuthenticated=true;
-    return res.redirect("/")
-  }else{
-
-    res.render("pages/404")
-  }
-})
-
-app.get("/logout",(req,res)=>{
-
-  isAuthenticated=false;
-  res.redirect("/");
-})
-
-app.get("/about",(req,res)=>{
-
-  res.render("pages/about",{
-    headTitle:"About Me"
-  })
-})
-
-app.get("/contact",(req,res)=>{
-
-  res.render("pages/contact",{
-    headTitle:"Contact",
-  })
-})
 app.listen(port,()=>{
 
   console.log(`app is listening on ${port}`);

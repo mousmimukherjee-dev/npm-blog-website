@@ -170,7 +170,7 @@ h4 {
 }
 
 .contact_left p i {
-  color: #111111;
+  color: #1a1a1a;
   margin-right: 15px;
   font-size: 1rem;
 }
@@ -188,6 +188,7 @@ h4 {
     #4facfe 100%
   );
   border-radius: 10px;
+  color:#1a1a1a;;
 }
 
 .about_me .content {
@@ -213,7 +214,7 @@ h4 {
 .social_icons a {
   margin-right: 15px;
   font-size: 2rem;
-  color: #111111;
+  color:#1a1a1a;
   display: inline-block;
   transition: transform 0.5s;
 }
@@ -243,7 +244,7 @@ form textarea {
   background-color: #fffffcde;
   padding: 15px;
   margin: 15px 0;
-  color: black;
+  color:#1a1a1a;
 }
 
 form button {
