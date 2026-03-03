@@ -19,10 +19,10 @@ app.use(express.static(path.join("public")))
 app.set("views" , path.join(_dirname,"views") );
 app.use(express.urlencoded({extended:true}))
 
-let isAuthenticated = false;
+app.locals.isAuthenticated = false;
 app.use((req,res,next)=>{
 
-  res.locals.isAuthenticated=isAuthenticated;
+  res.locals.isAuthenticated = app.locals.isAuthenticated;
   next();
 })
 app.use((req,res,next)=>{
@@ -37,7 +37,7 @@ app.get("/",(req,res)=>{
 
   res.render("pages/home",{blogPosts,
     headTitle:"Blog Home",
-    isAuthenticated
+    
 
   })
 })

@@ -15,13 +15,14 @@
     <a href="/contact">Contact Me!</a>
     <div class="login">
     
-    <% if(isAuthenticated){ %>
+    <% if(!isAuthenticated){ %>
 
-      <a href="/logout">Log out</a>
+      <a href="/login">Log in</a>
 
    <% } else { %>
 
-      <a href="/login">Log in</a>
+     
+      <a href="/logout">Log out</a>
 
    <% } %>
    

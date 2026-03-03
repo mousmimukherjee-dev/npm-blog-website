@@ -22,11 +22,8 @@ loginRouter.post("/",(req,res)=>{
   const passwordRegex = /^.{6,}$/; 
   if(usernameRegex.test(username) && passwordRegex.test(password)){
 
-    res.locals.isAuthenticated=true;
-    return res.redirect("/")
-  }else{
-
-    res.render("pages/404")
+    req.app.locals.isAuthenticated = true;
+    res.redirect("/")
   }
 })
 

@@ -8,8 +8,8 @@ const logoutRouter = express.Router();
 
 logoutRouter.get("/",(req,res)=>{
 
-  isAuthenticated=false;
-  res.redirect("/");
+ req.app.locals.isAuthenticated = false;
+ res.redirect("/login")
 })
 
 export default logoutRouter;

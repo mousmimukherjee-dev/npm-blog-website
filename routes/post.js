@@ -16,7 +16,7 @@ postRouter.get("/:id",(req,res)=>{
 
     res.render(`pages/post${post.id}`,{post,
       headTitle:post.title,
-      isAuthenticated:res.locals.isAuthenticated
+     
     });
   }
   else{
